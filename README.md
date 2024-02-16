@@ -1,49 +1,47 @@
-# Tarea API - Laravel
-
+Tarea API - Laravel
 Este proyecto Laravel proporciona una API simple para la gestión de tareas, permitiendo operaciones CRUD básicas.
 
-## Funcionalidades Principales
+Funcionalidades Principales
+Creación de Tareas: Permite agregar nuevas tareas.
+Listado de Tareas: Muestra todas las tareas disponibles.
+Actualización de Tareas: Permite modificar detalles de una tarea existente.
+Eliminación de Tareas: Elimina tareas de la lista.
+Requisitos del Sistema
+PHP (7.4 o superior)
+Composer
+MySQL
+Cómo Funciona
+Clonar el Repositorio:
 
-1. **Creación de Tareas:** Permite agregar nuevas tareas.
-2. **Listado de Tareas:** Muestra todas las tareas disponibles.
-3. **Actualización de Tareas:** Permite modificar detalles de una tarea existente.
-4. **Eliminación de Tareas:** Elimina tareas de la lista.
+git clone <URL_DEL_REPOSITORIO>
+cd tarea-api
+Instalar Dependencias:
 
-## Requisitos del Sistema
+composer install
+Configurar Base de Datos:
 
-- PHP (7.4 o superior)
-- Composer
-- MySQL
+Copiar .env.example a .env y configurar las credenciales de la base de datos.
+Ejecutar Migraciones:
 
-## Cómo Funciona
+php artisan migrate
+Configurar Controlador y Rutas:
 
-1. **Clonar el Repositorio:**
-   - `git clone <URL_DEL_REPOSITORIO>`
-   - `cd tarea-api`
+Editar app/Http/Controllers/TareaController.php y routes/api.php según necesidades.
+Autenticación de Usuarios:
 
-2. **Instalar Dependencias:**
-   - `composer install`
+Opcional - Configurar middleware 'auth' para proteger rutas.
+Ejecutar el Servidor Laravel:
 
-3. **Configurar Base de Datos:**
-   - Copiar `.env.example` a `.env` y configurar las credenciales de la base de datos.
+php artisan serve
+Visitar http://127.0.0.1:8000 en el navegador o usar herramientas como Postman.
+Iniciar Docker (Opcional):
 
-4. **Ejecutar Migraciones:**
-   - `php artisan migrate`
-
-5. **Configurar Controlador y Rutas:**
-   - Editar `app/Http/Controllers/TareaController.php` y `routes/api.php` según necesidades.
-
-6. **Autenticación de Usuarios:**
-   - Opcional - Configurar middleware 'auth' para proteger rutas.
-
-7. **Ejecutar el Servidor:**
-   - `php artisan serve`
-   - Visitar `http://127.0.0.1:8000` en el navegador o usar herramientas como Postman.
-
-## Contribuciones
-
+Si prefieres utilizar Docker para ejecutar la aplicación, sigue estos pasos:
+Asegúrate de tener Docker y Docker Compose instalados.
+Ejecuta docker-compose up -d --build para construir y levantar los contenedores.
+La aplicación estará disponible en http://localhost. Asegúrate de ajustar las configuraciones en docker-compose.yml según sea necesario.
+Contribuciones
 Las contribuciones son bienvenidas. Si encuentras problemas o tienes sugerencias, abre un problema o envía una solicitud de extracción.
 
-## Licencia
-
+Licencia
 Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
