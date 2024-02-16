@@ -1,34 +1,49 @@
-# Paso 1: Crear un nuevo proyecto Laravel
-composer create-project --prefer-dist laravel/laravel tarea-api
+# Tarea API - Laravel
 
-# Paso 2: Acceder al directorio del proyecto
-cd tarea-api
+Este proyecto Laravel proporciona una API simple para la gestión de tareas, permitiendo operaciones CRUD básicas.
 
-# Paso 3: Instalar dependencias
-composer install
+## Funcionalidades Principales
 
-# Paso 4: Editar el archivo .env para configurar la base de datos
-# Asegúrate de crear una base de datos y configurar las credenciales
-cp .env.example .env
-# Abre .env con tu editor de texto y configura DB_DATABASE, DB_USERNAME y DB_PASSWORD
+1. **Creación de Tareas:** Permite agregar nuevas tareas.
+2. **Listado de Tareas:** Muestra todas las tareas disponibles.
+3. **Actualización de Tareas:** Permite modificar detalles de una tarea existente.
+4. **Eliminación de Tareas:** Elimina tareas de la lista.
 
-# Paso 5: Crear migración, modelo y controlador
-php artisan make:model Tarea -mcr
+## Requisitos del Sistema
 
-# Paso 6: Editar la migración (database/migrations/xxxx_xx_xx_create_tareas_table.php)
-# Define la estructura de la tabla 'tareas'
+- PHP (7.4 o superior)
+- Composer
+- MySQL
 
-# Paso 7: Ejecutar migraciones
-php artisan migrate
+## Cómo Funciona
 
-# Paso 8: Configurar el controlador (app/Http/Controllers/TareaController.php)
-# Agregar el middleware 'auth' en el constructor o en los métodos según sea necesario
+1. **Clonar el Repositorio:**
+   - `git clone <URL_DEL_REPOSITORIO>`
+   - `cd tarea-api`
 
-# Paso 9: Configurar las rutas (routes/api.php)
-# Utiliza Route::middleware(['auth']) para proteger las rutas por autenticación
+2. **Instalar Dependencias:**
+   - `composer install`
 
-# Paso 10: Ejecutar el servidor
-php artisan serve
+3. **Configurar Base de Datos:**
+   - Copiar `.env.example` a `.env` y configurar las credenciales de la base de datos.
 
-# Mensaje final
-echo "¡Proyecto configurado y servidor en ejecución! Visita http://127.0.0.1:8000"
+4. **Ejecutar Migraciones:**
+   - `php artisan migrate`
+
+5. **Configurar Controlador y Rutas:**
+   - Editar `app/Http/Controllers/TareaController.php` y `routes/api.php` según necesidades.
+
+6. **Autenticación de Usuarios:**
+   - Opcional - Configurar middleware 'auth' para proteger rutas.
+
+7. **Ejecutar el Servidor:**
+   - `php artisan serve`
+   - Visitar `http://127.0.0.1:8000` en el navegador o usar herramientas como Postman.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si encuentras problemas o tienes sugerencias, abre un problema o envía una solicitud de extracción.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
