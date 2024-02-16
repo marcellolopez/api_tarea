@@ -36,9 +36,15 @@ Este proyecto Laravel proporciona una API simple para la gestión de tareas, per
 6. **Autenticación de Usuarios:**
    - Opcional - Configurar middleware 'auth' para proteger rutas.
 
-7. **Ejecutar el Servidor:**
+7. **Ejecutar el Servidor Laravel:**
    - `php artisan serve`
    - Visitar `http://127.0.0.1:8000` en el navegador o usar herramientas como Postman.
+
+8. **Iniciar Docker (Opcional):**
+   - Si prefieres utilizar Docker para ejecutar la aplicación, sigue estos pasos:
+      - Asegúrate de tener Docker y Docker Compose instalados.
+      - Ejecuta `docker-compose up -d --build` para construir y levantar los contenedores.
+      - La aplicación estará disponible en `http://localhost`. Asegúrate de ajustar las configuraciones en `docker-compose.yml` según sea necesario.
 
 ## Contribuciones
 
